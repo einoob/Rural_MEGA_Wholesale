@@ -12,9 +12,9 @@
             foreach ($action["order"] as $items) {
                 $sum = $items["price"] * $items["amount"];
                 $total += $sum;
-                $str = $str . $items["name"] . " x " . $items["amount"] . " = " . $sum . "<br>"; 
+                $str = $str . "" . $items["name"] . " " . $items["amount"] . " x " . $items["price"] .  "€  =  " . $sum . " € <br>"; 
             }
-            $str = $str . "<strong>Total: " . $total . "</strong><hr>";
+            $str = $str . "<br><strong>Total: " . $total . " € </strong><hr>";
         }
         return ($str);
     }

@@ -89,3 +89,10 @@ body{
     background-color: lightgrey;
     width: 100px;
 }
+
+.orderthanks {
+    background-color: gold;
+    padding: 1vw;
+    text-align: center;
+    font-size: 3vh;
+}

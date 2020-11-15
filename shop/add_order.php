@@ -9,6 +9,7 @@
 	$file[] = $new_order;
 	file_put_contents("../private/order", serialize($file));
 	unlink("../private/basket");
+	header("Location: index.php?valid_order=OK");
 	echo "Thank you for your order, ";
 	echo $_SESSION["logged_user"] . "!";
 	echo "<br><br><a href=\"index.php\">index</a>";

@@ -1,6 +1,8 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <meta charset="utf-8">
 </head>
 <body>
 
@@ -57,6 +59,9 @@
             
             add_element_to_page("main_panel", "html/main_panel.html", "");
             $gotit = ($_GET);
+            if ($gotit["valid_order"] == "OK") {
+                add_element_to_page("orderthanks", "", "Thank you for your order!");
+            }
             if ($_SESSION['admin'] != ""){
                 add_element_to_page_with_function("main_panel", "admin_user");
                 if ($gotit['modify'] == 'user'){

@@ -32,7 +32,7 @@
 			$file[] = $arr;
 			file_put_contents("../private/passwd", serialize($file));
 			echo "OK\n";
-			header("Location: index.php"); // add /shop/logged_user or smth
+			header("Location: index.php");
 		}
 	}
 ?>
