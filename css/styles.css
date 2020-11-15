@@ -62,9 +62,9 @@ body{
 }
 
 .main_panel{
-    margin-top: -1vw;
-    padding-top: 2vw;
-    padding-bottom: 2vw;
+    margin-top: -1vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
     padding-left: 5%;
     padding-right: 5%;
     background-color: khaki;
@@ -77,7 +77,12 @@ body{
 }
 
 .tablehomma{
-    margin-top: -4vw;
+    margin-top: -4vh;
+}
+
+.sort_menu{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 
 #header_img{

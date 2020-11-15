@@ -4,10 +4,10 @@
 		$sort = preg_replace('/_/', ' ', $_GET["sort"]);
         $_SESSION["sort"] = $sort;
         
-        $ret_str = "<div><strong>View by categories</strong>
+        $ret_str = "<div class=sort_menu><strong>View by categories</strong>
 		<input type=button value=\"Raw materials\" onClick=\"window.location.href='?sort=raw_materials'\">
 		<input type=\"button\" value=\"Tools\" onClick=\"window.location.href='?sort=tools'\">
-		<input type=\"button\" value=\"All\" onClick=\"window.location.href='?sort='\">
+		<input type=\"button\" value=\"All\" onClick=\"window.location.href='?sort='\"><hr>
         </div>";
         
 		if ($sort != "") {
