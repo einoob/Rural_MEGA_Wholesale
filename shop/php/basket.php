@@ -22,7 +22,7 @@
 			$sum += $item["price"] * $item["amount"];
 		}
 		if ($_SESSION['logged_user']){
-			$tail = '<br> <a href=index.php?order=OK>Submit your order</a>';
+			$tail = '<br> <a href=index.php?order=OK>View your order</a>';
 		}
 		else{
 			$tail = "<br>Log in to submit your order";

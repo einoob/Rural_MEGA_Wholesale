@@ -12,10 +12,10 @@
         foreach ($basket as $item) {
             $sum = $item["price"] * $item["amount"];
             $total += $sum;
-            $str = $str . "<tr><td>" . $item["name"] . "</td><td>" . $item["amount"] . " x " . $item["price"] . " € = </td><td>" . $sum . " €</td></tr>";
+            $str = $str . "<tr><td>" . $item["name"] . "</td><td>" . $item["amount"] . " x " . $item["price"] . " € </td><td>= </td><td>" . $sum . " €</td></tr>";
         }
         $str = $str . "</table><br><strong>Total cost " . $total . " € </strong>";
-        $str = $str . "<br><br><a href=add_order.php>Order!</a>" . "<br><br><a href=index.php>got back to shopping</a>";
+        $str = $str . "<br><br><a href=add_order.php>Order!</a> <br><br> <a href=php/clear_basket.php> Clear basket</a>" . "<br><br><br><a href=index.php>Go back to shopping</a>";
         return ($str);
     }
 ?>

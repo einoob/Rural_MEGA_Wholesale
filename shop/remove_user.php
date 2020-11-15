@@ -9,7 +9,6 @@
 			unset($file[$i]);
 			$file = array_values($file);
 			file_put_contents("../private/passwd", serialize($file));
-			header("Location: index.php");
 		}
 	}
 	header("Location: index.php?modify=user");
