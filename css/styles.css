@@ -1,0 +1,86 @@
+body{
+    background-color: green;
+    position: relative;
+    text-align: center;
+}
+
+.main{
+    text-align: left;
+    display: block;
+    background-color: lightcyan;
+    border-width: 0.1vw;
+    border-style: solid;
+    width: 85%;
+}
+
+.header_box{
+    background-color: lightcyan;
+    border-style: solid;
+}
+
+.login_box{
+    background-color: lightcyan;
+    border-style: solid;
+    float: right;
+    width: 35%;
+}
+
+.logged{
+    display: inline-block;
+}
+
+.vip{
+    background-color: gold
+}
+
+.loser{
+    background-color: honeydew;
+}
+
+.user_greeting{
+    text-align: right;
+    font-size: 1.5vw;
+    color: black;
+}
+
+.create{
+    background-color: honeydew;
+    padding: 1vw;
+    border-style: solid;
+}
+
+.login{
+    background-color: honeydew;
+    padding: 1vw;
+    border-style: solid;
+}
+
+.corner_info{
+    background-color: honeydew;
+    padding: 1vw;
+    border-style: solid;
+}
+
+.main_panel{
+    margin-top: -1vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: khaki;
+    width: 90%;
+    display: inline-flexbox;
+}
+
+.side_panel{
+    float: right;
+}
+
+.tablehomma{
+    margin-top: -4vw;
+}
+
+#header_img{
+    background-color: lightgrey;
+    width: 100px;
+}
