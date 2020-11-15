@@ -19,7 +19,8 @@
 		$file = unserialize(file_get_contents("../private/passwd"));
 		if (strlen($_POST["passwd"]) == 0 || strlen($_POST["login"]) == 0
 		|| !check_duplicate_login($file, $_POST["login"])) {
-			echo "Username/password is empty or username already exists.\n ERROR\n";
+			echo "Username/password is empty or username already exists.<br><br>";
+			echo "<a href=index.php>Back to main page</a>";
 		}
 		else {
 			$admin = $_POST["admin"] === "yes" ? true: false;
