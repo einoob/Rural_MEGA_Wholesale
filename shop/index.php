@@ -14,6 +14,7 @@
             include("php/order_validate.php");
             include("php/admin_user.php");
             include("php/modify_products.php");
+            include("php/modify_users.php");
             include("php/view_orders.php");
 
             function add_element_to_page_with_function($class_var, $passed_fun)
@@ -37,10 +38,7 @@
             echo '</div>';
 
             add_element_to_page("header", "html/header.html", "");
-            //add_element_to_page("");
-            
-//            $_SESSION['logged_user'] = "";
-//            $_SESSION['logged_user'] = "seppo";
+
             if ($_SESSION['logged_user'])
             {
                 add_element_to_page("vip", "html/vip.html", "");
@@ -63,16 +61,7 @@
             if ($_SESSION['admin'] != ""){
                 add_element_to_page_with_function("main_panel", "admin_user");
                 if ($gotit['modify'] == 'user'){
-                    echo "<h2>Current users:</h2>";
-                    $file = unserialize(file_get_contents("../private/passwd"));
-                    echo "<ul>";
-                    foreach ($file as $account) {
-                        if ($account["admin"] == false) {
-                            echo "<li>" . $account["login"] . "</li>";
-                        }
-                    }
-                    echo "</ul>";
-                    add_element_to_page("main_panel", "html/modify.html", "");
+                    add_element_to_page_with_function("main_panel", "modify_users");
                 }
                 if ($gotit['modify'] == "product"){
                     add_element_to_page_with_function("main_panel", "modify_products");
