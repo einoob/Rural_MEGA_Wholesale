@@ -11,7 +11,7 @@
         }
         $str = $str . "</ul>";
         $str = $str . '<form action="remove_user.php" method="GET">
-        User to delete: <input name="user_delete" value="">
+        User to modify: <input name="user_delete" value="">
         <input type="submit" value="DELETE">
         </form>';
         return ($str);
