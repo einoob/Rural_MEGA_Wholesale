@@ -11,7 +11,7 @@
 			else{
 				$tail = "<br><br> Add something to your order";
 			}
-			return ($header . "Items: 0 <br> Sum: 0" . $tail);
+			return ($header . "Items: 0 <br> Sum: 0 €" . $tail);
 		}
 
 		$amount = 0;
@@ -27,6 +27,6 @@
 		else{
 			$tail = "<br>Log in to submit your order";
 		}
-		return ($header . "Items: " . $amount . "<br>Sum: " . $sum . $tail);
+		return ($header . "Items: " . $amount . "<br>Sum: " . $sum . " €" . $tail);
     }
 ?>
