@@ -38,7 +38,6 @@
             echo '</div>';
 
             add_element_to_page("header", "html/header.html", "");
-
             if ($_SESSION['logged_user'])
             {
                 add_element_to_page("vip", "html/vip.html", "");
@@ -77,5 +76,4 @@
                 add_element_to_page_with_function("main_panel", "print_products");
             }
         ?>
-
     </div>
