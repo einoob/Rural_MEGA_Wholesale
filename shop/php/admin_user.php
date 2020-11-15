@@ -7,17 +7,17 @@
     <tr><td>Price</td> <td><input name=price value=></td><br /></tr>
     <tr><td>Categories</td> <td><input name=categories value=></td><br /></tr>
 </table>
-<input type=submit name=submit value=ADD />
+<input type=submit name=submit value="ADD / MODIFY" />
 </form>
 <a href=index.php?modify=user>
-    Remove users
+    List users
 </a><br>
 <a href=index.php?modify=product>
-    Remove products
+    List products
 </a><br>
 <a href=index.php?modify=order>
-    View orders
-</a><br><br><a onclick="return confirm(\'Are you sure?\')" href="./install.php">Launch shop</a>';
+    List orders
+</a><br><br><a onclick="return confirm(\'Are you sure? All data will be overwritten\')" href="./install.php">Launch shop</a>';
 return ($str);
     }
 ?>

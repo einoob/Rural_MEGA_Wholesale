@@ -14,20 +14,14 @@
 	$passwd = $_POST["passwd"];
 	if (auth($login, $passwd)) {
 		$_SESSION["logged_user"] = $login;
-		if (is_admin($login)) {
-		//	echo "you are adminaa\n";
-		$_SESSION["admin"] = "admin";
-			header("Location: index.php");
-		}
-		else {
-		//	echo "you are boring normal person";
-		$_SESSION["admin"] = "";
-			header("Location: index.php");
-		}
+		if (is_admin($login))
+			{ $_SESSION["admin"] = "admin"; }
+		else
+			{ $_SESSION["admin"] = ""; }
+		header("Location: index.php");
 	}
 	else {
 		$_SESSION["logged_user"] = "";
-		echo "Login error<br><br>";
-		echo "<a href=index.php>Back to main page</a>";
+		header("Location: index.php");
 	}
 ?>

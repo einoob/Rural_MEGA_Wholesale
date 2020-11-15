@@ -10,14 +10,17 @@
 		"price" => floatval($_POST["price"]),
 		"categories" => explode(",", $_POST["categories"])
 	);
-	if ($_POST["product"] != "" && $_POST["price"] != "" && $_POST["submit"] == "ADD"
+	$len = count($file);
+	for($i = 0; $i <= $len; $i++) {
+		if ($new_product["name"] === $file[$i]["name"]) {
+			unset($file[$i]);
+			$file = array_values($file);
+		}
+	}
+	if ($_POST["product"] != "" && $_POST["price"] != "" && $_POST["submit"] == "ADD / MODIFY"
 	&& is_numeric($new_product["price"])) {
 		$file[] = $new_product;
 		file_put_contents("../private/product", serialize($file));
-		echo "Product " . $new_product[name] . " added";
-		echo "<br><a href=\"./index.php\">index</a>";
 	}
-	else {
-		header("Location: http://localhost:8080/rush00/shop/admin_user.html");
-	}
+	header("Location: index.php?modify=product");
 ?>
