@@ -8,7 +8,7 @@
 	$new_product = Array(
 		"name" => $_POST["product"],
 		"price" => floatval($_POST["price"]),
-		"categories" => Array(explode(" ", $_POST["categories"]))
+		"categories" => explode(",", $_POST["categories"])
 	);
 	if ($_POST["product"] != "" && $_POST["price"] != "" && $_POST["submit"] == "ADD"
 	&& is_numeric($new_product["price"])) {
